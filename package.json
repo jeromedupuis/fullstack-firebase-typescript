@@ -1,0 +1,14 @@
+{
+  "name": "fullstack",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "src/*"
+    ]
+  },
+  "scripts": {
+    "dev:client": "yarn workspace fullstack-next dev",
+    "build:client": "yarn workspace fullstack-next build"
+  }
+}
