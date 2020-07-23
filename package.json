@@ -15,14 +15,14 @@
     "build:public": "rimraf ./functions/public && cp -R src/public functions/public",
     "build:server": "rimraf ./functions/server && yarn workspace fullstack-server build",
     "functions:build": "yarn workspace fullstack-functions build",
-    "functions:preserve": "yarn build:public && build:server && build:client && yarn functions:build",
-    "functions:serve": "yarn workspace fullstack-functions serve"
+    "functions:preserve": "yarn build:public && yarn build:server && yarn build:client && yarn functions:build",
+    "functions:serve": "yarn workspace fullstack-functions serve",
+    "functions:predeploy": "yarn install",
+    "functions:deploy": "yarn workspace fullstack-functions deploy"
   },
   "devDependencies": {
     "cross-env": "^7.0.2",
-    "rimraf": "^3.0.2"
-  },
-  "dependencies": {
+    "rimraf": "^3.0.2",
     "dotenv": "^8.2.0"
   }
 }
