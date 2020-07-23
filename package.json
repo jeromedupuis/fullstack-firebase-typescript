@@ -10,14 +10,19 @@
   },
   "scripts": {
     "dev:client": "yarn workspace fullstack-next dev",
+    "dev:server": "yarn workspace fullstack-server dev",
     "build:client": "rimraf ./functions/next && yarn workspace fullstack-next build",
     "build:public": "rimraf ./functions/public && cp -R src/public functions/public",
+    "build:server": "rimraf ./functions/server && yarn workspace fullstack-server build",
     "functions:build": "yarn workspace fullstack-functions build",
-    "functions:preserve": "yarn build:public && yarn functions:build",
+    "functions:preserve": "yarn build:public && build:server && build:client && yarn functions:build",
     "functions:serve": "yarn workspace fullstack-functions serve"
   },
   "devDependencies": {
     "cross-env": "^7.0.2",
     "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0"
   }
 }

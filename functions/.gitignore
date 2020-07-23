@@ -5,9 +5,11 @@
 # Typescript v1 declaration files
 typings/
 
-node_modules/
 ui-debug.log
 firebase-debug.log
-lib
-public
-next
+
+node_modules/
+lib/
+public/
+next/
+server/

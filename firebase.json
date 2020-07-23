@@ -3,6 +3,10 @@
     "public": "functions/public",
     "rewrites": [
       {
+        "source": "/api/**",
+        "function": "server"
+      },
+      {
         "source": "**",
         "function": "next"
       }
