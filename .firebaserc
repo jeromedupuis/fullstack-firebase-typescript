@@ -1,5 +1,5 @@
 {
   "projects": {
-    "default": "yama-project-dev"
+    "default": "your-firebase-project-name"
   }
 }

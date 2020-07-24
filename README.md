@@ -1,6 +1,7 @@
 # fullstack-firebase-typescript
 
 ## initialization
+- edit .firebaserc and set your firebase project name
 - yarn
 
 ## dev
