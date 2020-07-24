@@ -1,0 +1,31 @@
+{
+  "name": "fullstack-graphql",
+  "version": "1.0.0",
+  "author": "Jerome J-F L. Dupuis",
+  "private": true,
+  "scripts": {
+    "codegen": "graphql-codegen --config codegen.yml",
+    "generate": "graphql-codegen"
+  },
+  "dependencies": {
+    "express-graphql": "^0.8.0",
+    "graphql-tools": "^6.0.12",
+    "graphql-upload": "^11.0.0",
+    "lodash": "^4.17.19"
+  },
+  "devDependencies": {
+    "@graphql-codegen/add": "1.17.0",
+    "@graphql-codegen/cli": "1.17.0",
+    "@graphql-codegen/fragment-matcher": "^1.17.0",
+    "@graphql-codegen/typescript": "1.17.0",
+    "@graphql-codegen/typescript-document-nodes": "1.17.0",
+    "@graphql-codegen/typescript-graphql-files-modules": "1.17.0",
+    "@graphql-codegen/typescript-operations": "^1.17.0",
+    "@types/express-graphql": "^0.8.0",
+    "@types/graphql-upload": "^8.0.3",
+    "@types/lodash": "^4.14.157"
+  },
+  "engines": {
+    "node": "10.17"
+  }
+}

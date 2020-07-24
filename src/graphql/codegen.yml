@@ -1,0 +1,22 @@
+overwrite: true
+schema: 'http://localhost:8082/graphql'
+documents: 'client/**/*.graphql'
+generates:
+  ../client/generated/introspection-result.ts:
+    plugins:
+      - 'fragment-matcher'
+    config:
+      apolloClientVersion: 3
+  ../client/generated/graphql.ts:
+    plugins:
+      - add: '/* eslint-disable */'
+      - 'typescript-document-nodes'
+      - 'typescript-operations'
+      - 'typescript'
+    config:
+      apolloClientVersion: 3
+  ../client/generated/modules.d.ts:
+    plugins:
+      - typescript-graphql-files-modules
+    config:
+      apolloClientVersion: 3
