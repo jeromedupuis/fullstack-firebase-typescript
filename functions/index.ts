@@ -22,4 +22,4 @@ exports.next = functions.runWith(runtimeOpts).https.onRequest((req, res) => {
   return app.prepare().then(() => handle(req, res));
 });
 
-// exports.api = functions.runWith(runtimeOpts).https.onRequest(api);
+exports.api = functions.runWith(runtimeOpts).https.onRequest(api);
