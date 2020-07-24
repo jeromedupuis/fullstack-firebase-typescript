@@ -8,7 +8,8 @@ const webpack = require('webpack');
 const path = require('path');
 const nodeExternals = require('webpack-node-externals');
 
-console.log('process.env.NODE_ENV', process.env.NODE_ENV)
+console.log('==== build SERVER ', process.env.NODE_ENV);
+
 const plugins = [
   new webpack.DefinePlugin({
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
@@ -23,7 +24,7 @@ module.exports = {
   ],
   plugins,
   entry: {
-    api: path.resolve(__dirname, '.build/entry'),
+    api: path.resolve(__dirname, '.build/server/entry'),
   },
   output: {
     path: path.resolve(__dirname, '../../functions/server'),

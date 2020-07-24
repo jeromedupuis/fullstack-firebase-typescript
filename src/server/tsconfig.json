@@ -18,10 +18,15 @@
   },
   "exclude": [
     "./node_modules",
+    "../graphql/node_modules",
     ".build"
   ],
   "include": [
     "**/*.ts",
-    "**/*.js"
+    "**/*.js",
+    "../graphql/server/**/*.ts",
+    "../graphql/server/**/*.js",
+    "../graphql/schema/**/*.ts",
+    "../graphql/schema/**/*.js"
   ]
 }

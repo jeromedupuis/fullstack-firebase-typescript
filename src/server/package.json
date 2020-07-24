@@ -2,16 +2,21 @@
   "name": "fullstack-server",
   "version": "1.0.0",
   "private": true,
+  "author": "Jerome J-F L. Dupuis",
   "scripts": {
     "build": "rimraf ../../functions/server && tsc && cross-env NODE_ENV=production ../../node_modules/.bin/webpack --config ./webpack.config.server.js --mode production",
-    "dev": "tsc && concurrently -k \"tsc -w\" \"nodemon cross-env NODE_ENV=development --watch .build .build/bin/start.js \""
+    "dev": "tsc && concurrently -k \"tsc -w\" \"nodemon cross-env NODE_ENV=development --watch .build .build/server/bin/start.js \""
   },
   "devDependencies": {
     "@babel/register": "^7.10.5",
+    "@types/cors": "^2.8.6",
     "babel-loader": "^8.1.0",
     "concurrently": "^5.2.0",
     "nodemon": "^2.0.4",
     "webpack-cli": "^3.3.12",
     "webpack-node-externals": "^2.5.0"
+  },
+  "engines": {
+    "node": "10"
   }
 }

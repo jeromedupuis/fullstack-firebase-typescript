@@ -2,6 +2,7 @@
   "name": "fullstack-next",
   "version": "1.0.0",
   "private": true,
+  "author": "Jerome J-F L. Dupuis",
   "scripts": {
     "dev": "next",
     "build": "next build",
@@ -18,5 +19,8 @@
     "@types/node": "^14.0.24",
     "gensync": "^1.0.0-beta.1",
     "typescript": "^3.9.7"
+  },
+  "engines": {
+    "node": "10.17"
   }
 }

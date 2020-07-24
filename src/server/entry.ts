@@ -1,10 +1,14 @@
 import express from "express";
 import useRouter from "./router";
+import middleware from "./middleware";
+import useGraphQl from "../graphql/server";
 
 function startAppServer(callback?: any) {
   const server = express();
 
+  middleware(server);
   useRouter(server);
+  useGraphQl(server);
 
   if(callback) {
     callback(server);

@@ -2,6 +2,7 @@
   "name": "fullstack",
   "version": "1.0.0",
   "private": true,
+  "author": "Jerome J-F L. Dupuis",
   "workspaces": {
     "packages": [
       "src/*",
@@ -16,7 +17,7 @@
     "build:server": "rimraf ./functions/server && yarn workspace fullstack-server build",
     "build:all": "yarn build:public && yarn build:server && yarn build:client && yarn functions:build",
     "functions:build": "yarn workspace fullstack-functions build",
-    "functions:serve": "build:all && yarn workspace fullstack-functions serve",
+    "functions:serve": "yarn build:all && yarn workspace fullstack-functions serve",
     "functions:predeploy": "yarn build:all && yarn workspace fullstack-functions predeploy",
     "functions:deploy": "yarn workspace fullstack-functions deploy"
   },
