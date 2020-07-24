@@ -29,7 +29,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, '../../functions/server'),
     filename: 'bundle.js',
-    libraryTarget: 'this'
+    libraryTarget: 'this',
+    globalObject: 'this',
   },
   devtool: 'source-map',
   module: {
@@ -50,6 +51,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.js']
+    mainFields: ['browser', 'main', 'module'],
+    extensions: ['.js','.ts','.graphql']
   }
 };

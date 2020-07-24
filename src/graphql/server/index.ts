@@ -7,8 +7,6 @@ import Query from './query';
 import Mutation from './mutation';
 import Resolver from './resolver';
 
-console.log('Mutation', Mutation);
-
 export function makeSchema() {
   return makeExecutableSchema({
     typeDefs: GraphQLTypeDef,

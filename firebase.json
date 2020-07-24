@@ -7,6 +7,10 @@
         "function": "api"
       },
       {
+        "source": "/graphql",
+        "function": "api"
+      },
+      {
         "source": "**",
         "function": "next"
       }
